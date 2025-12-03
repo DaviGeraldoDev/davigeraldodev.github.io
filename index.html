@@ -105,9 +105,9 @@
                 </svg>
             </div>
             <h2 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">Espere! Você pode estar deixando dinheiro na mesa.</h2>
-            <p class="text-gray-600 mb-6 text-sm md:text-base">Nosso sistema gera ROI médio em apenas <strong>3 meses</strong>. Você está a 2 minutos de saber se qualificamos sua região.</p>
-            <button onclick="closeModalAndScroll()" class="w-full gradient-btn font-bold py-3 md:py-4 rounded-full text-base md:text-lg shadow-lg mb-3">
-                QUERO SER FRANQUEADO
+            <p class="text-gray-600 mb-6 text-sm md:text-base">Nosso sistema gera ROI médio em apenas <strong>3 meses</strong>. Você está a 2 minutos de iniciar a qualificação via WhatsApp.</p>
+            <button onclick="closeModalAndRedirect()" class="w-full gradient-btn font-bold py-3 md:py-4 rounded-full text-base md:text-lg shadow-lg mb-3">
+                QUERO SER FRANQUEADO AGORA
             </button>
         </div>
     </div>
@@ -135,8 +135,8 @@
             </p>
 
             <div class="flex flex-col md:flex-row gap-4 justify-center items-center px-4">
-                <button onclick="scrollToQualification()" class="gradient-btn w-full md:w-auto px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-xl transition-all animate-float">
-                    QUERO INICIAR QUALIFICAÇÃO
+                <button onclick="redirectToWhatsapp()" class="gradient-btn w-full md:w-auto px-8 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-xl transition-all animate-float">
+                    QUERO INICIAR QUALIFICAÇÃO AGORA
                 </button>
             </div>
             <p class="mt-4 text-xs md:text-sm text-gray-300">⏳ Vagas limitadas por região. Processo seletivo aberto.</p>
@@ -215,7 +215,7 @@
                         </li>
                     </ul>
                     <div class="mt-8">
-                        <button onclick="scrollToQualification()" class="gradient-btn w-full md:w-auto px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-md transition-all">
+                        <button onclick="redirectToWhatsapp()" class="gradient-btn w-full md:w-auto px-8 py-4 rounded-full font-bold text-base md:text-lg shadow-md transition-all">
                             COMEÇAR A FATURAR COM MÍDIA
                         </button>
                     </div>
@@ -274,7 +274,7 @@
         </div>
     </section>
 
-    <section class="py-10 md:py-16 bg-white">
+    <section class="py-10 md:py-16 md:pb-10 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-6 md:mb-10">
                 <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-500 text-xs font-bold mb-3 tracking-wide border border-gray-200">
@@ -300,7 +300,7 @@
                     </iframe>
                 </div>
                 
-                <div class="flex flex-col md:grid md:grid-cols-3 gap-3 md:gap-6 mb-8 md:mb-12">
+                <div class="flex flex-col md:grid md:grid-cols-3 gap-3 md:gap-6 mb-4 md:mb-6">
                     
                     <div class="flex flex-row md:flex-col items-center md:items-center text-left md:text-center bg-gray-50 p-4 md:p-6 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 h-full">
                         <div class="flex-shrink-0 gradient-bg w-10 h-10 md:w-16 md:h-16 rounded-full flex items-center justify-center mr-4 md:mr-0 md:mb-6 shadow-lg shadow-primary/30">
@@ -313,7 +313,7 @@
                     </div>
                     
                     <div class="flex flex-row md:flex-col items-center md:items-center text-left md:text-center bg-gray-50 p-4 md:p-6 rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100 relative overflow-hidden h-full">
-                         <div class="absolute top-0 right-0 bg-secondary text-primary text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-bl-lg">UPGRADE 2.0</div>
+                        <div class="absolute top-0 right-0 bg-secondary text-primary text-[9px] md:text-[10px] font-bold px-2 py-1 rounded-bl-lg">UPGRADE 2.0</div>
                         <div class="flex-shrink-0 gradient-bg w-10 h-10 md:w-16 md:h-16 rounded-full flex items-center justify-center mr-4 md:mr-0 md:mb-6 shadow-lg shadow-primary/30">
                             <span class="text-lg md:text-3xl font-bold text-white">2</span>
                         </div>
@@ -334,6 +334,20 @@
                     </div>
 
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-8 md:mb-10">
+                Keep Charged na Mídia: Reconhecimento da Nossa Inovação
+            </h2>
+            <div class="flex flex-wrap justify-center items-center gap-6 md:gap-16 max-w-5xl mx-auto">
+                <img src="/src/logo_exame.png" alt="Logo Exame" class="h-12 md:h-16 w-auto object-contain">
+                <img src="/src/logo_moneytimes.png" alt="Logo Money Times" class="h-12 md:h-16 w-auto object-contain">
+                <img src="/src/logo_pegn.png" alt="Logo Empresas & Negócios" class="h-12 md:h-16 w-auto object-contain">
+                <img src="/src/logo_rocket.jpg" alt="Logo Rocket" class="h-12 md:h-16 w-auto object-contain">
             </div>
         </div>
     </section>
@@ -361,7 +375,7 @@
             </div>
 
             <div class="mt-8 md:mt-10">
-                <button onclick="scrollToQualification()" class="gradient-btn w-full md:w-auto px-8 py-4 rounded-full font-bold text-base md:text-lg hover:shadow-white/20 hover:shadow-lg transition-all">
+                <button onclick="redirectToWhatsapp()" class="gradient-btn w-full md:w-auto px-8 py-4 rounded-full font-bold text-base md:text-lg hover:shadow-white/20 hover:shadow-lg transition-all">
                     QUERO SABER O VALOR DO INVESTIMENTO
                 </button>
             </div>
@@ -560,41 +574,46 @@
 
     <section id="qualification" class="py-12 md:py-20 gradient-bg text-white relative">
         <div class="container mx-auto px-4 max-w-4xl text-center">
-            <h2 class="text-2xl md:text-5xl font-bold mb-4 md:mb-6">Pronto para dar o próximo passo?</h2>
+            <h2 class="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
+                Não perca tempo! <span class="text-secondary">Converse agora</span> com um Especialista.
+            </h2>
             <p class="text-base md:text-xl text-gray-200 mb-8">
-                Estamos selecionando parceiros para implementar o Keep Charged 2.0 em novas regiões.
-                O investimento é acessível, mas as <strong>vagas são limitadas</strong> para garantir o suporte de qualidade.
+                Estamos selecionando parceiros para implementar o Keep Charged 2.0 em novas regiões. 
+                O investimento é acessível, mas as <strong>vagas são limitadas</strong>. 
+                Seja rápido para garantir a exclusividade da sua região.
             </p>
 
             <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 border border-white/20 text-left">
-                <h3 class="text-xl md:text-2xl font-bold text-secondary mb-4 text-center">Como funciona o Processo:</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-secondary mb-4 text-center">
+                    Sua jornada para o Faturamento Recorrente começa aqui:
+                </h3>
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="bg-secondary text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">1</div>
                         <div>
-                            <h4 class="font-bold text-lg">Qualificação Rápida</h4>
-                            <p class="text-gray-300 text-sm">Responda a um questionário de 2 minutos para analisarmos o perfil da sua região.</p>
+                            <h4 class="font-bold text-lg">Inicie a Conversa com o Consultor</h4>
+                            <p class="text-gray-300 text-sm">Clique abaixo para um atendimento imediato via WhatsApp. Nosso consultor fará uma breve coleta de informações.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="bg-secondary text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">2</div>
                         <div>
-                            <h4 class="font-bold text-lg">Call de Estratégia</h4>
-                            <p class="text-gray-300 text-sm">Se aprovado, um especialista agendará uma reunião para apresentar o plano financeiro.</p>
+                            <h4 class="font-bold text-lg">Agendamento da Call de Apresentação</h4>
+                            <p class="text-gray-300 text-sm">Com base em suas respostas, você será direcionado para agendar uma reunião online e conhecer o Ecossistema 2.0 em detalhes.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="bg-secondary text-primary font-bold w-8 h-8 rounded-full flex items-center justify-center mr-4 flex-shrink-0">3</div>
                         <div>
-                            <h4 class="font-bold text-lg">Início Imediato</h4>
-                            <p class="text-gray-300 text-sm">Receba seus kits e acesso à plataforma para começar a faturar.</p>
+                            <h4 class="font-bold text-lg">Proposta e Implementação Rápida</h4>
+                            <p class="text-gray-300 text-sm">Após a call, se qualificado, você recebe o plano de investimento, assina o contrato e inicia o faturamento em poucas semanas.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="mt-8 text-center">
-                    <button onclick="redirectToTypebot()" class="w-full md:w-auto gradient-btn px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-2xl animate-pulse-fast">
-                        INICIAR QUALIFICAÇÃO AGORA
+                    <button onclick="redirectToWhatsapp()" class="w-full md:w-auto gradient-btn px-6 md:px-10 py-4 md:py-5 rounded-full font-bold text-lg md:text-xl shadow-2xl animate-pulse-fast">
+                        FALE COM O ESPECIALISTA VIA WHATSAPP
                     </button>
                     <p class="text-xs text-gray-300 mt-3 flex items-center justify-center gap-1">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
@@ -630,14 +649,16 @@
             resultado.innerText = faturamento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
-        // Scroll Suave
-        function scrollToQualification() {
-            document.getElementById('qualification').scrollIntoView({ behavior: 'smooth' });
+        // NOVO: Função de Redirecionamento para o WhatsApp (Unificado)
+        function redirectToWhatsapp() {
+            // Número de telefone e mensagem pré-formatada do seu arquivo
+            window.location.href = "https://wa.me/5541996259803?text=Gostaria%20de%20saber%20mais%20sobre%20a%20franquia%20Keep%20Charged!";
         }
 
-        // Redirecionamento (Simulação)
-        function redirectToTypebot() {
-            window.location.href = "https://wa.me/5541996259803?text=Gostaria%20de%20saber%20mais%20sobre%20a%20franquia%20Keep%20Charged!";
+        // NOVO: Função para fechar o modal de saída e redirecionar para o WhatsApp
+        function closeModalAndRedirect() {
+            closeModal();
+            redirectToWhatsapp();
         }
 
         // Exit Intent Logic
@@ -658,7 +679,7 @@
         // Trigger por tempo no Mobile
         setTimeout(() => {
             if(window.innerWidth < 768 && !exitIntentShown) {
-                 // showModal();
+                 // showModal(); // Mantido como comentário, mas se quiser habilitar
             }
         }, 15000);
 
@@ -666,10 +687,6 @@
             document.getElementById('exitModal').style.display = 'none';
         }
 
-        function closeModalAndScroll() {
-            closeModal();
-            scrollToQualification();
-        }
         
         // Função para customizar o botão de play do vídeo
         function togglePlay(videoId, playBtnId) {
