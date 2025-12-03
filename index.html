@@ -11,8 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#8E3889', // Roxo Keep Charged
-                        secondary: '#F4E843', // Amarelo Keep Charged
+                        primary: '#8E3889',
+                        secondary: '#F4E843',
                         dark: '#1a0a1a',
                     },
                     animation: {
@@ -633,35 +633,26 @@
     </footer>
 
     <script>
-        // Lógica da Calculadora
         function calcularGanhos() {
             const mesas = document.getElementById('rangeMesas').value;
             const displayMesas = document.getElementById('displayMesas');
             const resultado = document.getElementById('resultadoFaturamento');
-            
-            // Atualiza display de mesas
+
             displayMesas.innerText = mesas + " mesas";
-            
-            // Cálculo: Mesas * 2 faces * R$ 60,00
             const faturamento = mesas * 2 * 60;
-            
-            // Formatação Real
+        
             resultado.innerText = faturamento.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         }
 
-        // NOVO: Função de Redirecionamento para o WhatsApp (Unificado)
         function redirectToWhatsapp() {
-            // Número de telefone e mensagem pré-formatada do seu arquivo
             window.location.href = "https://wa.me/5541996259803?text=Gostaria%20de%20saber%20mais%20sobre%20a%20franquia%20Keep%20Charged!";
         }
 
-        // NOVO: Função para fechar o modal de saída e redirecionar para o WhatsApp
         function closeModalAndRedirect() {
             closeModal();
             redirectToWhatsapp();
         }
 
-        // Exit Intent Logic
         let exitIntentShown = false;
         
         const showModal = () => {
@@ -671,24 +662,14 @@
             }
         };
 
-        // Trigger quando o mouse sai da tela (Desktop)
         document.addEventListener('mouseleave', e => {
             if (e.clientY <= 0) showModal();
         });
-
-        // Trigger por tempo no Mobile
-        setTimeout(() => {
-            if(window.innerWidth < 768 && !exitIntentShown) {
-                 // showModal(); // Mantido como comentário, mas se quiser habilitar
-            }
-        }, 15000);
 
         function closeModal() {
             document.getElementById('exitModal').style.display = 'none';
         }
 
-        
-        // Função para customizar o botão de play do vídeo
         function togglePlay(videoId, playBtnId) {
             const video = document.getElementById(videoId);
             const playBtn = document.getElementById(playBtnId);
@@ -714,18 +695,15 @@
             }
         }
         
-        // Lógica do Carrossel de Depoimentos (Mobile)
         let currentSlide = 0;
         const testimonials = document.querySelectorAll('.testimonial-card');
         const dots = document.querySelectorAll('.dot');
 
         function updateCarousel() {
-            // Verifica se é mobile (largura < 768px)
             const isMobile = window.innerWidth < 768;
 
             testimonials.forEach((card, index) => {
                 if (isMobile) {
-                    // Mobile: Mostra apenas o atual
                     if (index === currentSlide) {
                         card.classList.remove('hidden');
                         card.classList.add('block');
@@ -734,13 +712,11 @@
                         card.classList.remove('block');
                     }
                 } else {
-                    // Desktop: Mostra todos sempre (remove a classe hidden se estiver lá)
                     card.classList.remove('hidden');
                     card.classList.add('block');
                 }
             });
 
-            // Atualiza os pontos (dots)
             dots.forEach((dot, index) => {
                 if (index === currentSlide) {
                     dot.classList.remove('bg-gray-300');
@@ -759,13 +735,11 @@
             updateCarousel();
         }
 
-        // Inicialização e Resize
         document.addEventListener('DOMContentLoaded', function() {
             calcularGanhos();
-            updateCarousel(); // Inicia o carrossel
+            updateCarousel(); 
         });
 
-        // Garante que o layout se ajuste se redimensionar a tela
         window.addEventListener('resize', updateCarousel);
     </script>
 </body>
