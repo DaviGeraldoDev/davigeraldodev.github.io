@@ -11,10 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#79007f',      /* Cor Principal (Roxo Profundo) */
-                        secondary: '#e8b62a',    /* Cor Secundária (Amarelo Dourado) */
-                        tertiary: '#ba8ab9',     /* Cor Terciária (Lavanda) */
-                        neutral_brand: '#aaaaaa',/* Cor Neutra (Cinza) */
+                        primary: '#8E3889',
+                        secondary: '#F4E843',
                         dark: '#1a0a1a',
                     },
                     animation: {
@@ -34,13 +32,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
-        
-        /* Paleta: Roxo Profundo -> Lavanda */
-        .gradient-bg { background: linear-gradient(135deg, #79007f 0%, #5c0060 60%, #4a004d 100%); }
-        
-        /* Paleta: Amarelo Dourado */
-        .gradient-btn { background: linear-gradient(to right, #e8b62a, #fccf4d); color: #4a004d; }
-        .gradient-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(232, 182, 42, 0.6); }
+        .gradient-bg { background: linear-gradient(135deg, #8E3889 0%, #4a1d4a 100%); }
+        .gradient-btn { background: linear-gradient(to right, #F4E843, #FFD700); color: #4a1d4a; }
+        .gradient-btn:hover { transform: scale(1.05); box-shadow: 0 0 20px rgba(244, 232, 67, 0.6); }
         
         .glass-effect {
             background: rgba(255, 255, 255, 0.1);
@@ -58,8 +52,8 @@
             height: 24px;
             width: 24px;
             border-radius: 50%;
-            background: #e8b62a;
-            border: 4px solid #79007f;
+            background: #F4E843;
+            border: 4px solid #8E3889;
             cursor: pointer;
             margin-top: -10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.3);
@@ -67,7 +61,7 @@
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
             height: 6px;
-            background: #aaaaaa;
+            background: #ddd;
             border-radius: 3px;
         }
 
@@ -119,7 +113,7 @@
     </div>
 
     <header class="gradient-bg text-white relative overflow-hidden pb-12 pt-8 md:pb-20 md:pt-10">
-        <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-tertiary opacity-20 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute top-0 right-0 w-64 h-64 md:w-96 md:h-96 bg-secondary opacity-10 rounded-full blur-3xl -mr-20 -mt-20"></div>
         <div class="absolute bottom-0 left-0 w-48 h-48 md:w-64 md:h-64 bg-secondary opacity-10 rounded-full blur-3xl -ml-10 md:-ml-20"></div>
 
         <div class="container mx-auto px-4 relative z-10 text-center">
@@ -238,12 +232,12 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
-                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-neutral_brand/30 opacity-70">
-                    <h3 class="text-lg md:text-xl font-bold text-neutral_brand mb-4 md:mb-6 flex items-center">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-200 opacity-70">
+                    <h3 class="text-lg md:text-xl font-bold text-gray-500 mb-4 md:mb-6 flex items-center">
                         <span class="bg-gray-200 text-gray-600 px-3 py-1 rounded text-xs md:text-sm mr-3">VERSÃO 1.0</span>
                         O Passado
                     </h3>
-                    <ul class="space-y-3 md:space-y-4 text-sm md:text-base text-neutral_brand">
+                    <ul class="space-y-3 md:space-y-4 text-sm md:text-base text-gray-500">
                         <li class="flex items-center">30 displays + 6 carregadores</li>
                         <li class="flex items-center">Menor faturamento (limitado aos displays)</li>
                         <li class="flex items-center">Menos pontos parceiros para oferecer aos anunciantes</li>
@@ -251,27 +245,27 @@
                     </ul>
                 </div>
 
-                <div class="bg-secondary p-6 md:p-8 rounded-2xl shadow-xl border-2 border-primary relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-primary text-secondary font-bold text-[10px] md:text-xs px-3 py-1 rounded-bl-lg">MAIS RENTÁVEL</div>
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-2 border-secondary relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-secondary text-primary font-bold text-[10px] md:text-xs px-3 py-1 rounded-bl-lg">MAIS RENTÁVEL</div>
                     <h3 class="text-lg md:text-xl font-bold text-primary mb-4 md:mb-6 flex items-center">
                         <span class="bg-primary text-secondary px-3 py-1 rounded text-xs md:text-sm mr-3">VERSÃO 2.0</span>
                         O Ecossistema Atual
                     </h3>
                     <ul class="space-y-3 md:space-y-4 text-gray-800 text-sm md:text-base">
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-700 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             <span><strong>4 Kits Completos:</strong> 120 Displays + 24 Carregadores + 72 Cabos.</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-700 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             <span><strong>Sistema de Gestão QR:</strong> Cardápio digital e pedidos para o restaurante.</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-700 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             <span><strong>Assessoria de Imprensa:</strong> Seu cliente sai na mídia (Ex: G1, Terra).</span>
                         </li>
                         <li class="flex items-start">
-                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-700 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-green-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
                             <span><strong>Diagnóstico de Marca:</strong> Diagnóstico gratuito para todos os anunciantes</span>
                         </li>
                     </ul>
@@ -283,7 +277,7 @@
     <section class="py-10 md:py-16 md:pb-10 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-6 md:mb-10">
-                <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-500 text-xs font-bold mb-3 tracking-wide border border-neutral_brand/50">
+                <span class="inline-block py-1 px-3 rounded-full bg-gray-100 text-gray-500 text-xs font-bold mb-3 tracking-wide border border-gray-200">
                     BASTIDORES DA OPERAÇÃO
                 </span>
                 <h2 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -361,7 +355,7 @@
     <section class="py-12 md:py-20 bg-primary text-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-2xl md:text-4xl font-bold mb-4">Simule seu Potencial de Faturamento</h2>
-            <p class="text-tertiary mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">Baseado na média de mercado (R$ 60,00 por face de publicidade).<br>O franqueado Keep Charged tem margem de lucro de aprox. 70%.</p>
+            <p class="text-gray-200 mb-8 md:mb-12 max-w-2xl mx-auto text-sm md:text-base">Baseado na média de mercado (R$ 60,00 por face de publicidade).<br>O franqueado Keep Charged tem margem de lucro de aprox. 70%.</p>
 
             <div class="bg-white text-gray-900 rounded-3xl p-6 md:p-8 max-w-3xl mx-auto shadow-2xl">
                 <div class="mb-8">
@@ -374,7 +368,7 @@
                     <input type="range" min="120" max="300" value="120" step="30" id="rangeMesas" oninput="calcularGanhos()" class="py-2">
                 </div>
 
-                <div class="bg-gray-100 rounded-xl p-4 md:p-6 border-2 border-dashed border-neutral_brand">
+                <div class="bg-gray-100 rounded-xl p-4 md:p-6 border-2 border-dashed border-gray-300">
                     <p class="text-xs md:text-sm text-gray-500 uppercase tracking-wide font-bold mb-2">Faturamento Estimado Mensal</p>
                     <div class="text-3xl md:text-5xl font-bold text-primary mb-2" id="resultadoFaturamento">R$ 14.400</div>
                 </div>
@@ -398,7 +392,7 @@
                     
                     <div class="testimonial-card bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-all h-full">
                         <div class="flex items-center mb-4">
-                            <img src="/src/Depoimentos_Rita.png" alt="Foto de Rita" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-primary">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-primary rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl">PL</div>
                             <div class="ml-4">
                                 <h4 class="font-bold text-sm md:text-base">Rita</h4>
                                 <p class="text-xs text-gray-500">São Paulo/SP</p>
@@ -409,7 +403,7 @@
 
                     <div class="testimonial-card hidden md:block bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-all h-full">
                         <div class="flex items-center mb-4">
-                            <img src="/src/Depoimentos_Douglas.png" alt="Foto de Douglas" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-secondary">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-secondary rounded-full flex items-center justify-center text-primary font-bold text-lg md:text-xl">N</div>
                             <div class="ml-4">
                                 <h4 class="font-bold text-sm md:text-base">Douglas</h4>
                                 <p class="text-xs text-gray-500">Conceição dos Ouros/MG</p>
@@ -420,7 +414,7 @@
 
                     <div class="testimonial-card hidden md:block bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition-all h-full">
                         <div class="flex items-center mb-4">
-                            <img src="/src/Depoimentos_Henrique.png" alt="Foto de Henrique" class="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover border-2 border-gray-800">
+                            <div class="w-10 h-10 md:w-12 md:h-12 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold text-lg md:text-xl">H</div>
                             <div class="ml-4">
                                 <h4 class="font-bold text-sm md:text-base">Henrique</h4>
                                 <p class="text-xs text-gray-500">Rondônia/RO</p>
@@ -583,7 +577,7 @@
             <h2 class="text-2xl md:text-5xl font-bold mb-4 md:mb-6">
                 Não perca tempo! <span class="text-secondary">Converse agora</span> com um Especialista.
             </h2>
-            <p class="text-base md:text-xl text-tertiary mb-8">
+            <p class="text-base md:text-xl text-gray-200 mb-8">
                 Estamos selecionando parceiros para implementar o Keep Charged 2.0 em novas regiões. 
                 O investimento é acessível, mas as <strong>vagas são limitadas</strong>. 
                 Seja rápido para garantir a exclusividade da sua região.
@@ -630,7 +624,7 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-neutral_brand py-8 md:py-10 text-center text-sm">
+    <footer class="bg-dark text-gray-500 py-8 md:py-10 text-center text-sm">
         <div class="container mx-auto px-4">
             <img src="/src/logo-roxa.png" alt="Keep Charged Logo" class="block mx-auto max-w-[140px] md:max-w-[170px] mb-4"/>
             <p>Copyright © 2025. Todos os direitos reservados.</p>
